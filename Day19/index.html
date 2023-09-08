@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Colores Profesional</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+<body>
+    <div class="color-selector">
+        <div class="color-controls">
+            <h2 class="selector__title">Selectores de Color</h2>
+            <input type="color" id="color-picker">
+            <input type="color" id="color-picker2">
+            <input type="color" id="color-picker3">
+            <input type="color" id="color-picker4">
+            <div class="color-codes">
+                <label for="hex-code" class="label__hex" >HEX:</label>
+                <input type="text" id="hex-code" class="input__code" readonly>
+                <label for="rgb-code" class="label__rgba">RGBA:</label>
+                <input type="text" id="rgb-code" class="input__code" readonly>
+                <label for="hsl-code" class="label__hsla">HSLA:</label>
+                <input type="text" id="hsl-code" class="input__code" readonly>
+            </div>
+        </div>
+        <div class="color-display" id="color-display">
+            Color de Muestra
+        </div>
+        <section class="degradado">
+            <section class="color__degradado">
+                <div class="color-presets">
+                    <h2 class="gradient__options--title">Colores para el degradado</h2>
+                    <label for="preset-color-1">Color 1:</label>
+                    <input type="color" id="preset-color-1">
+                    <label for="preset-color-2">Color 2:</label>
+                    <input type="color" id="preset-color-2">
+                </div>
+            </section>
+            <section class="gradient-options">
+                <h2 class="gradient__options--title">Opciones del degradado</h2>
+                <label for="gradient-type">Tipo:</label>
+                <select id="gradient-type">
+                    <option value="linear-gradient">Lineal</option>
+                    <option value="radial-gradient">Radial</option>
+                </select>
+                <label for="gradient-angle">Ángulo:</label>
+                <input type="number" id="gradient-angle" value="45" min="0" max="360">
+                <label for="gradient-preview">Vista Previa:</label>
+                <div class="gradient-preview" id="gradient-preview"></div>
+            </section>
+        </section>
+
+        <!-- CÓDIGO DE VERSIÓN PREVIA -->
+        <!-- <div class="text-effects">
+            <h2>Texto y Fondo</h2>
+            <label for="text-color">Color de Texto:</label>
+            <input type="color" id="text-color">
+            <label for="background-color">Color de Fondo:</label>
+            <input type="color" id="background-color">
+            <div class="text-display" id="text-display">
+                <input type="text" id="text-display" >
+            </div>
+        </div> -->
+        
+        <section class="text__effects">
+            <header class="text__efects--header">
+                <h2>Texto y Fondo</h2>
+                <p>Introduce el texto que desees y personaliza su color de texto y fondo:</p>
+            </header>
+            <div class="text__effects--options">
+                <label for="text-input" class="text__effects--label">Texto:</label>
+                <textarea id="text-input" rows="4" cols="50" placeholder="Introduce tu texto aquí"></textarea>
+            </div>
+            <div class="text__effects--colors">
+                <label for="text-color">Color de Texto:</label>
+                <input type="color" id="text-color">
+                <label for="background-color">Color de Fondo:</label>
+                <input type="color" id="background-color">
+            </div>
+            <div class="text-display">
+                <p id="output-text__label">Resultado final</p>
+                <p id="output-text"></p>
+            </div>
+            <div class="color-codes">
+                <p>Códigos HEX</p>
+                <label for="text-hex-code" class="text-hex-code__label">Hex Texto:</label>
+                <input type="text" id="text-hex-code" readonly>
+                <label for="text-bg-hex-code" class="text-bg-hex-code__label">Hex Fondo:</label>
+                <input type="text" id="text-bg-hex-code" readonly>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

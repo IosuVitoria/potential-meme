@@ -1,0 +1,337 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('./assets/fondo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.color-selector {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff95;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.color-selector:hover {
+    transform: translateY(-5px);
+}
+
+.color-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.color-codes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-codes label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+.degradado{
+    display: flex;
+    gap: 45px;
+    background-color: #d3cacace;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 45px;
+}
+
+.color-display {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.color-display:hover {
+    transform: scale(1.1);
+}
+
+.color-presets {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.color-presets label {
+    font-size: 18px;
+}
+
+.color-presets input[type="color"] {
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.color-presets input[type="color"]:hover {
+    transform: scale(1.15);
+}
+
+.gradient-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gradient-options label {
+    font-size: 18px;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: center;
+    background: #d3caca;
+    border-radius: 25px;
+    color: #f5f2f2;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-options select, .gradient-options input[type="number"] {
+    font-size: 18px;
+    border: 2px solid #ccc;
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.gradient-options select:hover, .gradient-options input[type="number"]:hover {
+    border-color: #090202;
+}
+
+.gradient-preview {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #000;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+    border-bottom: 85px;
+}
+
+.gradient-preview:hover {
+    transform: scale(1.05);
+}
+
+/* 
+
+CSS DE LA VERSIÓN PREVIA DEL CÓDIGO DEL DIV TEXT-EFFECTS
+
+.text-effects {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-effects label {
+    font-size: 18px;
+}
+
+.text-effects input[type="color"] {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.text-effects input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+.text-display {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.text-display:hover {
+    transform: scale(1.05);
+} */
+
+.selector__title{
+    font-size: 21px;
+    padding: 10px 15px;
+    background: #d3caca;
+    border-radius: 15px;
+    color: #f5f2f2;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.label__hsla,
+.label__rgba,
+.label__hex,
+.text-hex-code__label,
+.text-bg-hex-code__label,
+#output-text__label{
+    width: 100%;
+    background: #d3caca;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 15px;
+    color: #f5f2f2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 21px;
+    font-weight: 900;
+}
+
+#text-hex-code,
+#text-bg-hex-code,
+.input__code{
+    padding: 10px 0;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.degradado{
+    margin-top:30px;
+}
+
+.gradient__options--title{
+    font-size: 21px;
+    padding: 10px 15px;
+    background: #8f8989;
+    border-radius: 15px;
+    color: #f5f2f2;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.text__effects {
+    width: 88%;
+    padding-bottom: 100px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #d3cacabc;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text__efects--header h2{
+    font-size: 21px;
+    padding: 10px 15px;
+    background: #8f8989;
+    border-radius: 15px;
+    color: #f5f2f2;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    text-align: center; 
+    text-transform:uppercase;
+    margin-bottom: 40px;
+}
+
+.text__efects--header p{
+    margin-bottom: 25px;
+}
+
+.text__effects--options{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.text__effects--label{
+    width: 100%;
+    margin-bottom: 30px;
+    background: #d3caca;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 15px;
+    color: #f5f2f2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.text__effects--options textarea{
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    height: 150px;
+}
+
+.text-display{
+    width: 50%;
+    margin-top: 30px;
+}
+
+#output-text{
+    width: 100%;
+    min-width: 200px;
+    min-height: 45px;
+    border-radius: 5px;
+    background-color: #8f898990;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.text__effects--colors{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap:25px;
+}
